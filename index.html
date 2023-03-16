@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Arrays</h2>
+
+<p>The Array.reverse() method reverses the order of the elements in an array.</p>
+
+<input type="input" id="input">
+<button id="button">SUBMIT</button>
+<div id="s">
+
+
+
+</div>
+<script>
+       <!-- var body=document.querySelector("body") -->
+       <!-- var input=document.getElementById("input") -->
+	   <!-- var button=document.getElementById("button") -->
+	     <!-- button.addEventListener("click",cre) -->
+		       <!-- function cre(){ -->
+		      <!-- var b=input.value -->
+			  <!-- for(i=0;i<b;i++){ -->
+			  <!-- var div=document.createElement("div") -->
+			  <!-- var c=document.createElement("input") -->
+			  <!-- c.setAttribute("type","checkbox") -->
+			  <!-- div.appendChild(c) -->
+			 <!-- input.parentNode.appendChild(div) -->
+			  <!-- } -->
+			  <!-- } -->
+			  <!-- document.addEventListener("keyup",(e)=>{ -->
+			    <!-- if(e.key==="Enter"){ -->
+				   <!-- cre() -->
+				   <!-- } -->
+				   <!-- }) -->
+<!-----------------------------------another method in javascript---------------------------------------->	
+                  				  -->  var body=document.querySelector("body")
+       var input=document.getElementById("input")
+	   var button=document.getElementById("button")
+	   var s=document.getElementById("s")
+	     input.addEventListener("input",cre)
+		       function cre(){
+		      var b=input.value
+			  for(i=0;i<b;i++){
+			  var div=document.createElement("div")
+			  var lab=document.createElement("label")
+			  lab.textContent="Check Box"
+			  var c=document.createElement("input")
+			  c.setAttribute("type","checkbox")
+			  s.appendChild(div)
+			  div.appendChild(lab)
+			  div.appendChild(c)
+			    }
+			  }
+			  input.addEventListener("input",()=>{   
+				    if(!input.value){
+			            s.remove("divv")
+						console.log("it")
+						location.reload()
+					   }
+                 
+				   })	
+                  console.log(s)
+</script>
+
+</body>
+</html>

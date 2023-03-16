@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="a"></canvas>
+
+
+</div>
+<script>
+  var a=document.getElementById("a")
+  var ctx=a.getContext("2d")
+  var isdrawing=false
+   a.width=window.innerWidth
+   a.height=window.innerHeight
+   a.addEventListener("mousedown",()=>{
+      isdrawing=true
+     ctx.beginPath()
+     ctx.stroke()
+     ctx.lineWidth=5
+    })
+ a.addEventListener("mousemove",(e)=>{
+     if(!isdrawing) return
+     ctx.lineTo(e.offsetX,e.offsetY)
+     ctx.stroke()
+    })	 
+a.addEventListener("mouseup",()=>isdrawing=false)	
+</script>
+
+</body>
+</html>
